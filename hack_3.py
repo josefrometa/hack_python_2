@@ -16,12 +16,29 @@ text: "qux" output => "QvX"
 
 
 def fn_hack_3(word):
-    new_string = []
     original_characters = "aeiou"
-    replaced_characters = "@3¡0v"
-    for i in word:
-        if i in word:
-            
-            
-    
+    new_characters = "@3¡0v"
+    my_string = str.maketrans(original_characters, new_characters)
+    replaced_characters = word.translate(my_string)
+    # this part of the code is incompleted, needs to be updated
+    # if len(replaced_characters) < 2:
+    #     short_result = []
+    #     for i in replaced_characters:
+    #         if i in new_characters:
+    #             short_result.append(i)
+    #         else:
+    #             short_result.append(i.upper())
+    #     return "".join(short_result)
+
+    first = replaced_characters[0].upper()
+    middle = replaced_characters[1:-1]
+    last = replaced_characters[-1].upper()
+    result = first + middle + last
     return result
+
+
+fn_hack_3('fooziman')
+print(fn_hack_3('fooziman'))
+print(fn_hack_3('3Q'))
+print(fn_hack_3('qux'))
+print(fn_hack_3('qv'))
