@@ -8,7 +8,10 @@ text: "eq" output => "eq"
 """
 
 
-def fn_hack_5(s):
-    result = s
-    #...
+def fn_hack_5(word):
+    result = "-".join(word)
+    print(result)
     return result
+
+
+print(fn_hack_5())

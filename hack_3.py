@@ -22,11 +22,17 @@ def fn_hack_3(word):
     my_string = str.maketrans(original_characters, new_characters)
     replaced_characters = word.translate(my_string)
 # here concatenates the splited string to upper the last part and the fist part of this string 
-    first = replaced_characters[0].upper()
-    middle = replaced_characters[1:-1]
-    last = replaced_characters[-1].upper()
-    result = first + middle + last
-    return result
+    if len(replaced_characters) < 2:
+        first = replaced_characters[0].upper()
+        last = replaced_characters[1]
+        result = first + last.lower() 
+        return result
+    else:
+        first = replaced_characters[0].upper()
+        middle = replaced_characters[1:-1]
+        last = replaced_characters[-1].upper()
+        result = first + middle + last
+        return result
 
 
 fn_hack_3('fooziman')
