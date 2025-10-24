@@ -22,7 +22,7 @@ def fn_hack_3(word):
     my_string = str.maketrans(original_characters, new_characters)
     replaced_characters = word.translate(my_string)
 # here concatenates the splited string to upper the last part and the fist part of this string 
-    if len(replaced_characters) <= 2:
+    if len(replaced_characters) <= 2 and replaced_characters[1] == 'v':
         first = replaced_characters[0].upper()
         last = replaced_characters[1]
         result = first + last.lower() 
