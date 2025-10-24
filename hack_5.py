@@ -9,7 +9,8 @@ text: "eq" output => "eq"
 
 
 def fn_hack_5(word):
-    result = "-".join(word)
+    
+    result = "-".join()
     print(result)
     return result
 
